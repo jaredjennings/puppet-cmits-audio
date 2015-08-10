@@ -19,5 +19,6 @@
 # volume is 0.'' ---\mlionstig{OSX8-00-01225}
 
 class audio::zero_input_volume {
-    include "audio::zero_input_volume::${::osfamily}"
+    $lower_osfamily = downcase($::osfamily)
+    include "audio::zero_input_volume::${lower_osfamily}"
 }

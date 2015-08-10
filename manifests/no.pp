@@ -17,5 +17,6 @@
 #
 
 class audio::no {
-    include "audio::no::${::osfamily}"
+    $lower_osfamily = downcase($::osfamily)
+    include "audio::no::${lower_osfamily}"
 }
